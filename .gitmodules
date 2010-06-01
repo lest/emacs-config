@@ -1,0 +1,24 @@
+[submodule "vendor/rinari"]
+	path = vendor/rinari
+	url = git://github.com/eschulte/rinari.git
+[submodule "vendor/rhtml"]
+	path = vendor/rhtml
+	url = git://github.com/eschulte/rhtml.git
+[submodule "vendor/yasnippets-rails"]
+	path = vendor/yasnippets-rails
+	url = git://github.com/eschulte/yasnippets-rails.git
+[submodule "vendor/zencoding"]
+	path = vendor/zencoding
+	url = git://github.com/chrisdone/zencoding.git
+[submodule "vendor/rspec-mode"]
+	path = vendor/rspec-mode
+	url = git://github.com/pezra/rspec-mode.git
+[submodule "vendor/markdown-mode"]
+	path = vendor/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
+[submodule "vendor/magit"]
+	path = vendor/magit
+	url = git://github.com/philjackson/magit.git
+[submodule "vendor/cucumber.el"]
+	path = vendor/cucumber.el
+	url = git://github.com/michaelklishin/cucumber.el.git

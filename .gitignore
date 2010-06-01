@@ -1,0 +1,7 @@
+*.elc
+/auto-save-list
+/env.el
+/history
+/image-dired
+/tramp
+/url/cookies
