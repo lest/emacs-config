@@ -1,4 +1,5 @@
 ;; erlang-mode
+(add-to-list 'load-path "~/emacs/vendor/erlang-mode")
 (require 'erlang-start)
 
 (require 'flymake)
