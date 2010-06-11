@@ -63,6 +63,7 @@
 ;; programming languages
 (load "~/emacs/rc-ruby.el")
 (load "~/emacs/rc-erlang.el")
+(load "~/emacs/rc-js.el")
 
 ;; spell checking
 (load "~/emacs/rc-spell.el")
