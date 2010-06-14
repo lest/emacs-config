@@ -44,6 +44,9 @@
 ;; require final newline
 (setq require-final-newline t)
 
+;; show empty lines
+(setq-default indicate-empty-lines t)
+
 ;; uniquify buffer names
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
