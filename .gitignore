@@ -1,5 +1,6 @@
 *.elc
 /auto-save-list
+/ede-projects.el
 /env.el
 /history
 /image-dired
