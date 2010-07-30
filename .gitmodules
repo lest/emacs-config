@@ -22,3 +22,9 @@
 [submodule "vendor/cucumber.el"]
 	path = vendor/cucumber.el
 	url = git://github.com/michaelklishin/cucumber.el.git
+[submodule "vendor/rvm.el"]
+	path = vendor/rvm.el
+	url = git://github.com/senny/rvm.el.git
+[submodule "vendor/org-mode"]
+	path = vendor/org-mode
+	url = git://repo.or.cz/org-mode.git

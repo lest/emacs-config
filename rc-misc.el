@@ -10,6 +10,9 @@
 ;; haml-mode.el
 (require 'haml-mode)
 
+;; sass-mode.el
+(require 'sass-mode)
+
 ;; yaml
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))

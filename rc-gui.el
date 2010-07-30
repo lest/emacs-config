@@ -10,8 +10,8 @@
 ;; frame size
 (setq default-frame-alist
       (append default-frame-alist
-	      '((width . 160)
-		(height . 50))))
+	      '((width . 200)
+		(height . 52))))
 (setq initial-frame-alist (copy-alist default-frame-alist))
 
 (setq split-width-threshold nil)

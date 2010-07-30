@@ -46,6 +46,11 @@
                                   'flymake-display-err-menu-for-current-line)
                    (flymake-mode t))))))
 
+;; ruby mode hook
+(defun lest/ruby-mode-hook ()
+  (whitespace-mode t))
+(add-hook 'ruby-mode-hook 'lest/ruby-mode-hook)
+
 ;; rinary
 (add-to-list 'load-path "~/emacs/vendor/rinari")
 (require 'rinari)
@@ -64,3 +69,7 @@
 ;; rhtml
 (add-to-list 'load-path "~/emacs/vendor/rhtml")
 (require 'rhtml-mode)
+(add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode))
+
+(add-to-list 'load-path "~/emacs/vendor/rvm.el")
+(require 'rvm)
