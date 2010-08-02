@@ -36,9 +36,6 @@
 (prefer-coding-system 'utf-8)
 (ansi-color-for-comint-mode-on)
 
-;; switch windows with C-left, C-right, C-up, C-down
-(windmove-default-keybindings 'control)
-
 ;; yes and no
 (fset 'yes-or-no-p 'y-or-n-p)
 
