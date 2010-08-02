@@ -29,3 +29,7 @@
 (add-to-list 'load-path "~/emacs/vendor/zencoding")
 (require 'zencoding-mode)
 (add-hook 'rhtml-mode-hook 'zencoding-mode)
+
+;; nav
+(add-to-list 'load-path "~/emacs/vendor/nav")
+(require 'nav)
