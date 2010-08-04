@@ -5,7 +5,7 @@
 			     yas/completing-prompt))
 
 ;; markdown-mode
-(add-to-list 'load-path "~/emacs/vendor/markdown-mode")
+(add-to-list 'load-path (concat config-dir "vendor/markdown-mode"))
 
 ;; haml-mode.el
 (require 'haml-mode)
@@ -21,15 +21,15 @@
 (setq css-indent-offset 2)
 
 ;; git
-(add-to-list 'load-path "~/emacs/vendor/magit")
+(add-to-list 'load-path (concat config-dir "vendor/magit"))
 (require 'magit)
 (global-set-key (kbd "C-c g") 'magit-status)
 
 ;; zencoding
-(add-to-list 'load-path "~/emacs/vendor/zencoding")
+(add-to-list 'load-path (concat config-dir "vendor/zencoding"))
 (require 'zencoding-mode)
 (add-hook 'rhtml-mode-hook 'zencoding-mode)
 
 ;; nav
-(add-to-list 'load-path "~/emacs/vendor/nav")
+(add-to-list 'load-path (concat config-dir "vendor/nav"))
 (require 'nav)

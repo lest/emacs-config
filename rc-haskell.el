@@ -1,5 +1,5 @@
-(add-to-list 'load-path "~/emacs/haskell-mode")
-(load "~/emacs/vendor/haskell-mode/haskell-site-file")
+(add-to-list 'load-path (concat config-dir "vendor/haskell-mode"))
+(load (concat config-dir "vendor/haskell-mode/haskell-site-file"))
 
 (defun lest/haskell-mode-hook ()
   (turn-on-haskell-doc-mode)

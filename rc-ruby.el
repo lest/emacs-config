@@ -53,24 +53,24 @@
 (add-hook 'ruby-mode-hook 'lest/ruby-mode-hook)
 
 ;; rinary
-(add-to-list 'load-path "~/emacs/vendor/rinari")
+(add-to-list 'load-path (concat config-dir "vendor/rinari"))
 (require 'rinari)
 
 ;; yasnippets-rails
-(load "~/emacs/vendor/yasnippets-rails/setup.el")
+(load (concat config-dir "vendor/yasnippets-rails/setup.el"))
 
 ;; rspec
-(add-to-list 'load-path "~/emacs/vendor/rspec-mode")
+(add-to-list 'load-path (concat config-dir "vendor/rspec-mode"))
 (require 'rspec-mode)
 
 ;; cucumber
-(add-to-list 'load-path "~/emacs/vendor/cucumber.el")
+(add-to-list 'load-path (concat config-dir "vendor/cucumber.el"))
 (require 'feature-mode)
 
 ;; rhtml
-(add-to-list 'load-path "~/emacs/vendor/rhtml")
+(add-to-list 'load-path (concat config-dir "vendor/rhtml"))
 (require 'rhtml-mode)
 (add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode))
 
-(add-to-list 'load-path "~/emacs/vendor/rvm.el")
+(add-to-list 'load-path (concat config-dir "vendor/rvm.el"))
 (require 'rvm)

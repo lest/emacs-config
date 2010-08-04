@@ -1,9 +1,3 @@
-;; turn off scrollbar
-(scroll-bar-mode -1)
-
-;; turn off toolbar
-(tool-bar-mode -1)
-
 ;; turn on column number mode
 (column-number-mode t)
 

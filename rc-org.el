@@ -1,5 +1,5 @@
-(setq load-path (cons "~/emacs/vendor/org-mode/lisp" load-path))
-(setq load-path (cons "~/emacs/vendor/org-mode/contrib/lisp" load-path))
+(setq load-path (cons (concat config-dir "vendor/org-mode/lisp") load-path))
+(setq load-path (cons (concat config-dir "vendor/org-mode/contrib/lisp") load-path))
 (require 'org-install)
 
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))

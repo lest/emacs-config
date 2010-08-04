@@ -1,9 +1,21 @@
+;; turn off toolbar and scrollbar
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+;; directory with config
+(setq config-dir (file-name-directory
+                  (or (buffer-file-name) load-file-name)))
+
 ;; environment settings
-(if (file-exists-p "~/emacs/env.el")
-    (load "~/emacs/env.el"))
+(if (file-exists-p (concat config-dir "env.el"))
+    (load (concat config-dir "env.el")))
+
+(setq system-specific-config (concat config-dir system-name ".el"))
+(if (file-exists-p system-specific-config)
+    (load system-specific-config))
 
 ;; vendor
-(add-to-list 'load-path "~/emacs/vendor")
+(add-to-list 'load-path (concat config-dir "vendor"))
 
 ;; stop creating backup~ and #auto-save# files
 (setq make-backup-files nil)
@@ -66,28 +78,28 @@
 (setq uniquify-buffer-name-style 'forward)
 
 ;; gui options
-(load "~/emacs/rc-gui.el")
+(load (concat config-dir "rc-gui.el"))
 
 ;; custom functions
-(load "~/emacs/rc-defuns.el")
+(load (concat config-dir "rc-defuns.el"))
 
 ;; custom hotkeys
-(load "~/emacs/rc-hotkeys.el")
+(load (concat config-dir "rc-hotkeys.el"))
 
 ;; misc modes
-(load "~/emacs/rc-misc.el")
+(load (concat config-dir "rc-misc.el"))
 
 ;; programming languages
-(load "~/emacs/rc-ruby.el")
-(load "~/emacs/rc-erlang.el")
-(load "~/emacs/rc-js.el")
-(load "~/emacs/rc-haskell.el")
+(load (concat config-dir "rc-ruby.el"))
+(load (concat config-dir "rc-erlang.el"))
+(load (concat config-dir "rc-js.el"))
+(load (concat config-dir "rc-haskell.el"))
 
 ;; spell checking
-(load "~/emacs/rc-spell.el")
+(load (concat config-dir "rc-spell.el"))
 
 ;; org-mode
-(load "~/emacs/rc-org.el")
+(load (concat config-dir "rc-org.el"))
 
 ;; start server
 (server-start)
