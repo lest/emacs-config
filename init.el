@@ -77,6 +77,10 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
+;; recent files
+(require 'recentf)
+(recentf-mode 1)
+
 ;; gui options
 (load (concat config-dir "rc-gui.el"))
 

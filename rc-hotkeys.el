@@ -22,28 +22,6 @@
 ;; kill current buffer
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 
-;; open next line
-(defun open-next-line (arg)
-  "Move to the next line and then opens a line.
-  See also `newline-and-indent'."
-  (interactive "p")
-  (end-of-line)
-  (open-line arg)
-  (next-line 1)
-  (when newline-and-indent
-    (indent-according-to-mode)))
+;; find recent files
+(global-set-key (kbd "C-x f") 'recentf-ido-find-file)
 
-(defun my-delete-word (arg)
-  "Delete characters forward until encountering the end of a word.
-  With argument, do this that many times.
-  This command does not push erased text to kill-ring."
-  (interactive "p")
-  (delete-region (point) (progn (forward-word arg) (point))))
-
-;; delete word without putting it to kill-ring
-(defun my-backward-delete-word (arg)
-  "Delete characters backward until encountering the beginning of a word.
-  With argument, do this that many times.
-  This command does not pus erased text to kill-ring."
-  (interactive "p")
-  (my-delete-word (- arg)))
