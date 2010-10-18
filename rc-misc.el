@@ -32,4 +32,4 @@
 
 ;; nav
 (add-to-list 'load-path (concat config-dir "vendor/nav"))
-(require 'nav)
+(autoload 'nav "nav" nil t)
