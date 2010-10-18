@@ -16,3 +16,5 @@
 (defun my-erlang-mode-hook ()
   (flymake-mode 1))
 (add-hook 'erlang-mode-hook 'my-erlang-mode-hook)
+
+(add-to-list 'auto-mode-alist '("rebar\\.config$" . erlang-mode))
