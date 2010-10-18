@@ -49,7 +49,7 @@
 
 ;; ruby mode hook
 (defun lest/ruby-mode-hook ()
-  (whitespace-mode t))
+  )
 (add-hook 'ruby-mode-hook 'lest/ruby-mode-hook)
 
 ;; rinary
