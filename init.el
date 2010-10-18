@@ -6,13 +6,22 @@
 (setq config-dir (file-name-directory
                   (or (buffer-file-name) load-file-name)))
 
-;; environment settings
-(if (file-exists-p (concat config-dir "env.el"))
-    (load (concat config-dir "env.el")))
+(defmacro load-config (filename)
+  `(load (concat config-dir ,filename)))
 
-(setq system-specific-config (concat config-dir system-name ".el"))
-(if (file-exists-p system-specific-config)
-    (load system-specific-config))
+(defmacro load-configs (&rest filenames)
+  `(progn
+     ,@(mapcar #'(lambda (f)
+                   `(load-config ,f))
+               filenames)))
+
+(defmacro load-config-if-exists (filename)
+  `(if (file-exists-p (concat config-dir ,filename))
+       (load-config ,filename)))
+
+;; environment settings
+(load-config-if-exists "env.el")
+(load-config-if-exists (concat system-name ".el"))
 
 ;; vendor
 (add-to-list 'load-path (concat config-dir "vendor"))
@@ -82,28 +91,29 @@
 (recentf-mode 1)
 
 ;; gui options
-(load (concat config-dir "rc-gui.el"))
+(load-config "rc-gui.el")
 
 ;; custom functions
-(load (concat config-dir "rc-defuns.el"))
+(load-config "rc-defuns.el")
 
 ;; custom hotkeys
-(load (concat config-dir "rc-hotkeys.el"))
+(load-config "rc-hotkeys.el")
 
 ;; misc modes
-(load (concat config-dir "rc-misc.el"))
+(load-config "rc-misc.el")
 
 ;; programming languages
-(load (concat config-dir "rc-ruby.el"))
-(load (concat config-dir "rc-erlang.el"))
-(load (concat config-dir "rc-js.el"))
-(load (concat config-dir "rc-haskell.el"))
+(load-configs "rc-ruby.el"
+              "rc-erlang.el"
+              "rc-js.el"
+              "rc-haskell.el"
+              "rc-lisp.el")
 
 ;; spell checking
-(load (concat config-dir "rc-spell.el"))
+(load-config "rc-spell.el")
 
 ;; org-mode
-(load (concat config-dir "rc-org.el"))
+(load-config "rc-org.el")
 
 ;; start server
 (server-start)
