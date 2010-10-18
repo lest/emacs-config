@@ -70,6 +70,7 @@
                            "^\*rake"
                            "^\*generate"
                            "^\*magit"
+                           "^\*slime-events\*"
                            "^\*rhtml-ruby-hook"))
 
 ;; delete trailing whitespace on save
