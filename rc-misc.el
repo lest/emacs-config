@@ -33,3 +33,7 @@
 ;; nav
 (add-to-list 'load-path (concat config-dir "vendor/nav"))
 (autoload 'nav "nav" nil t)
+
+;; nginx config files
+(add-to-list 'load-path (concat config-dir "vendor/nginx-mode"))
+(require 'nginx-mode)
