@@ -25,9 +25,6 @@
 [submodule "vendor/rvm.el"]
 	path = vendor/rvm.el
 	url = git://github.com/senny/rvm.el.git
-[submodule "vendor/org-mode"]
-	path = vendor/org-mode
-	url = git://repo.or.cz/org-mode.git
 [submodule "vendor/nginx-mode"]
 	path = vendor/nginx-mode
 	url = git://github.com/ajc/nginx-mode.git
