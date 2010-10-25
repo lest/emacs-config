@@ -28,3 +28,6 @@
 [submodule "vendor/nginx-mode"]
 	path = vendor/nginx-mode
 	url = git://github.com/ajc/nginx-mode.git
+[submodule "vendor/auto-complete"]
+	path = vendor/auto-complete
+	url = git://github.com/m2ym/auto-complete.git
