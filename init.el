@@ -91,6 +91,13 @@
 (require 'recentf)
 (recentf-mode 1)
 
+;; winner mode
+(require 'winner)
+(setq winner-dont-bind-my-keys t)
+(global-set-key (kbd "<C-s-left>") 'winner-undo)
+(global-set-key (kbd "<C-s-right>") 'winner-redo)
+(winner-mode t)
+
 ;; gui options
 (load-config "rc-gui.el")
 
