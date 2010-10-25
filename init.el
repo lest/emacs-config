@@ -117,4 +117,6 @@
 (load-config "rc-org.el")
 
 ;; start server
-(server-start)
+(require 'server)
+(when (not (server-running-p))
+  (server-start))
