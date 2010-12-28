@@ -47,11 +47,6 @@
                                   'flymake-display-err-menu-for-current-line)
                    (flymake-mode t))))))
 
-;; ruby mode hook
-(defun lest/ruby-mode-hook ()
-  )
-(add-hook 'ruby-mode-hook 'lest/ruby-mode-hook)
-
 ;; rinary
 (add-to-list 'load-path (concat config-dir "vendor/rinari"))
 (require 'rinari)
