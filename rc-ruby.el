@@ -69,8 +69,10 @@
 
 ;; rhtml
 (add-to-list 'load-path (concat config-dir "vendor/rhtml"))
-(require 'rhtml-mode)
+(autoload 'rhtml-mode "rhtml-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.html\\.erb$" . rhtml-mode))
 
+;; rvm
 (add-to-list 'load-path (concat config-dir "vendor/rvm.el"))
 (require 'rvm)
