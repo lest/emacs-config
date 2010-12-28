@@ -37,10 +37,6 @@
 (require 'zencoding-mode)
 (add-hook 'rhtml-mode-hook 'zencoding-mode)
 
-;; nav
-(add-to-list 'load-path (concat config-dir "vendor/nav"))
-(autoload 'nav "nav" nil t)
-
 ;; nginx config files
 (add-to-list 'load-path (concat config-dir "vendor/nginx-mode"))
 (autoload 'nginx-mode "nginx-mode" nil t)
