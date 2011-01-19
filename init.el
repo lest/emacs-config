@@ -77,6 +77,9 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;; (remove-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; make script files executable
+(add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
+
 ;; require final newline
 (setq require-final-newline t)
 
