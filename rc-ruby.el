@@ -72,3 +72,4 @@
 ;; rvm
 (add-to-list 'load-path (concat config-dir "vendor/rvm.el"))
 (require 'rvm)
+(rvm-autodetect-ruby)
