@@ -31,6 +31,19 @@
 ;; css
 (setq css-indent-offset 2)
 
+;; scss
+(add-to-list 'load-path (concat config-dir "vendor/scss-mode"))
+(autoload 'scss-mode "scss-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))
+(setq scss-compile-at-save nil)
+
+;; coffee
+(add-to-list 'load-path (concat config-dir "vendor/coffee-mode"))
+(autoload 'coffee-mode "coffee-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+(setq-default tab-width 2)
+
 ;; git
 (add-to-list 'load-path (concat config-dir "vendor/magit"))
 (autoload 'magit-status "magit" nil t)
