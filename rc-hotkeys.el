@@ -10,6 +10,12 @@
 (global-set-key (kbd "<s-return>") 'open-next-line)
 (global-set-key (kbd "<M-backspace>") 'my-backward-delete-word)
 
+;; linux hotkeys
+(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "C-S-x") 'clipboard-kill-region)
+(global-set-key (kbd "C-S-c") 'clipboard-kill-ring-save)
+(global-set-key (kbd "C-S-v") 'x-clipboard-yank)
+
 ;; comment or uncomment region
 (global-set-key (kbd "C-c /") 'comment-or-uncomment-region)
 
