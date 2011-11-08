@@ -73,3 +73,7 @@
 (add-to-list 'load-path (concat config-dir "vendor/rvm.el"))
 (require 'rvm)
 (rvm-autodetect-ruby)
+
+;; slim
+(autoload 'slim-mode "slim-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))
