@@ -48,32 +48,5 @@
                                   'flymake-display-err-menu-for-current-line)
                    (flymake-mode t))))))
 
-;; rinary
-(add-to-list 'load-path (concat config-dir "vendor/rinari"))
-(require 'rinari)
-
-;; yasnippets-rails
-(load (concat config-dir "vendor/yasnippets-rails/setup.el"))
-
-;; rspec
-(add-to-list 'load-path (concat config-dir "vendor/rspec-mode"))
-(require 'rspec-mode)
-
-;; cucumber
-(add-to-list 'load-path (concat config-dir "vendor/cucumber.el"))
-(require 'feature-mode)
-
-;; rhtml
-(add-to-list 'load-path (concat config-dir "vendor/rhtml"))
-(autoload 'rhtml-mode "rhtml-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode))
-(add-to-list 'auto-mode-alist '("\\.html\\.erb$" . rhtml-mode))
-
 ;; rvm
-(add-to-list 'load-path (concat config-dir "vendor/rvm.el"))
-(require 'rvm)
 (rvm-autodetect-ruby)
-
-;; slim
-(autoload 'slim-mode "slim-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))

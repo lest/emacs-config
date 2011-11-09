@@ -30,3 +30,6 @@
 
 ;; find recent files
 (global-set-key (kbd "C-x f") 'recentf-ido-find-file)
+
+;; git
+(global-set-key (kbd "C-c g") 'magit-status)

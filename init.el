@@ -23,6 +23,79 @@
 (load-config-if-exists "env.el")
 (load-config-if-exists (concat system-name ".el"))
 
+;; el-get
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil t)
+  (url-retrieve
+   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
+   (lambda (s)
+     (end-of-buffer)
+     (eval-print-last-sexp))))
+
+(setq yas/prompt-functions '(yas/dropdown-prompt yas/ido-prompt yas/no-prompt))
+
+(setq el-get-sources
+      '((:name yasnippet
+               :type git
+               :url "https://github.com/capitaomorte/yasnippet.git"
+               :after (lambda ()
+                        (require 'dropdown-list)
+                        (setq yas/prompt-functions '(yas/dropdown-prompt
+                                                     yas/ido-prompt
+                                                     yas/no-prompt))))
+
+        (:name coffee-mode
+               :after (lambda ()
+                        (add-hook 'coffee-mode-hook
+                                  '(lambda () (set (make-local-variable 'tab-width) 2)))))
+
+        (:name auto-complete
+               :after (lambda ()
+                        (add-to-list 'ac-modes 'erlang-mode)))
+
+        haml-mode
+        sass-mode
+
+        (:name scss-mode
+               :after (lambda ()
+                        (setq scss-compile-at-save nil)
+                        (add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))))
+
+        (:name zencoding-mode
+               :after (lambda ()
+                        (add-hook 'rhtml-mode-hook 'zencoding-mode)))
+
+        (:name css-mode
+               :after (lambda ()
+                        (setq css-indent-offset 2)))
+
+        (:name nginx-mode
+               :type git
+               :url "https://github.com/ajc/nginx-mode.git")
+
+        (:name slim-mode
+               :type http
+               :url "https://raw.github.com/stonean/slim/master/extra/slim-mode.el"
+               :post-init (lambda ()
+                            (autoload 'slim-mode "slim-mode" nil t)
+                            (add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))))
+
+        feature-mode
+	haskell-mode
+        magit
+        markdown-mode
+        rhtml-mode
+        rspec-mode
+        rvm
+        rinari
+        ruby-mode
+        textile-mode
+        yaml-mode))
+
+(el-get 'sync (mapcar 'el-get-source-name el-get-sources))
+
+
 ;; vendor
 (add-to-list 'load-path (concat config-dir "vendor"))
 
