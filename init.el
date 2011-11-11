@@ -26,14 +26,7 @@
 ;; el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
-(unless (require 'el-get nil t)
-  (url-retrieve
-   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
-   (lambda (s)
-     (end-of-buffer)
-     (eval-print-last-sexp))))
-
-(setq yas/prompt-functions '(yas/dropdown-prompt yas/ido-prompt yas/no-prompt))
+(require 'el-get)
 
 (setq el-get-sources
       '((:name yasnippet
@@ -41,9 +34,7 @@
                :url "https://github.com/capitaomorte/yasnippet.git"
                :after (lambda ()
                         (require 'dropdown-list)
-                        (setq yas/prompt-functions '(yas/dropdown-prompt
-                                                     yas/ido-prompt
-                                                     yas/no-prompt))))
+                        (setq yas/prompt-functions '(yas/dropdown-prompt yas/ido-prompt yas/no-prompt))))
 
         (:name coffee-mode
                :after (lambda ()

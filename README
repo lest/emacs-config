@@ -1,0 +1,5 @@
+Dependencies:
+
+* el-get (mkdir -p ~/.emacs.d/el-get && git clone https://github.com/dimitri/el-get.git ~/.emacs.d/el-get/el-get)
+* texinto (sudo apt-get install texinfo)
+* rake (make sure you have default ruby when using rvm)
