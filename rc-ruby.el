@@ -34,6 +34,11 @@
                (indent-line-to arg-indent)))
         (when (> offset 0) (forward-char offset))))))
 
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (make-local-variable 'ac-ignores)
+            (add-to-list 'ac-ignores "end")))
+
 ;; flymake
 (eval-after-load 'ruby-mode
   '(progn
