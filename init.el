@@ -115,6 +115,9 @@
 ;; save history
 (savehist-mode t)
 
+;; auto revert
+(global-auto-revert-mode t)
+
 ;; encoding
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
