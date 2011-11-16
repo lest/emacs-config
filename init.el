@@ -45,6 +45,9 @@
                :after (lambda ()
                         (add-to-list 'ac-modes 'erlang-mode)))
 
+        auto-complete-ruby
+        auto-complete-css
+
         haml-mode
         sass-mode
 
@@ -72,6 +75,7 @@
                             (autoload 'slim-mode "slim-mode" nil t)
                             (add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))))
 
+        gist
         feature-mode
 	haskell-mode
         magit
@@ -96,6 +100,10 @@
 
 ;; delete selection when typing
 (delete-selection-mode t)
+
+;; cua-mode for rectangular selections
+(setq cua-enable-cua-keys nil)
+(cua-mode t)
 
 ;; save last cursor position in file
 (require 'saveplace)
