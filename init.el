@@ -85,6 +85,7 @@
         rvm
         rinari
         ruby-mode
+        ruby-electric
         textile-mode
         yaml-mode))
 

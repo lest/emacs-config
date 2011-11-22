@@ -50,7 +50,7 @@
               (local-file (file-relative-name
                            temp-file
                            (file-name-directory buffer-file-name))))
-         (list "ruby" (list "-c" local-file))))
+         (list "ruby" (list "-c" "-W2" local-file))))
      (push '("\\.rb$" flymake-ruby-init) flymake-allowed-file-name-masks)
      (push '("\\.rake$" flymake-ruby-init) flymake-allowed-file-name-masks)
      (push '("\\.gemspec$" flymake-ruby-init) flymake-allowed-file-name-masks)
